@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -30,7 +31,7 @@ namespace Codecompass.Function
 
             log.LogInformation($"CSP report: {JsonConvert.SerializeObject(data)}");
             
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult("OK");
         }
     }
 }
