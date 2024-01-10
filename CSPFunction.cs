@@ -28,7 +28,7 @@ namespace Codecompass.Function
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
 
-            log.LogInformation($"CSP report: {JsonConvert.SerializeObject(data)}")
+            log.LogInformation($"CSP report: {JsonConvert.SerializeObject(data)}");
             
             return new OkObjectResult(responseMessage);
         }
